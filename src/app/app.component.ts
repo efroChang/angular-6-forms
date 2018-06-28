@@ -14,14 +14,11 @@ export class AppComponent {
 
   answer: string = '';
 
+  genders: string[] = ['male', 'female'];
+
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
-
-  // onSubmit( form: NgForm )
-  // {
-  //   console.log( form );
-  // }
 
   onSubmit()
   {
