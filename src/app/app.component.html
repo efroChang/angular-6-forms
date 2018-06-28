@@ -83,4 +83,16 @@
       </form>
     </div>
   </div>
+  <!-- User Info Summary -->
+  <hr>
+  <div class="row" *ngIf="formSubmitted">
+    <div class="col-xs-12">
+      <h3>Your User Data</h3>
+      <p>User Name: {{ user.summaryUserName }} </p>
+      <p>Email: {{ user.summaryEmail }}</p>
+      <p>Question: {{ user.summaryQuestion }}</p>
+      <p>Answer: {{ user.summaryAnswer }}</p>
+      <p>Gender: {{ user.summaryGender }}</p>
+    </div>
+  </div>
 </div>
