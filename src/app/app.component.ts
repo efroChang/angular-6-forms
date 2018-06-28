@@ -18,6 +18,17 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+
+    // [KEY] Use NgForm to set values on the form!!!
+    this.signupForm.setValue({
+      userData: {
+        userName: suggestedName,
+        email: 'test@testmail.com'
+      },
+      secret: 'teacher',
+      questionAnswer: 'Miss Thomas',
+      gender: 'female'
+    });
   }
 
   onSubmit()
