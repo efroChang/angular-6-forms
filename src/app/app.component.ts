@@ -19,16 +19,23 @@ export class AppComponent {
   suggestUserName() {
     const suggestedName = 'Superuser';
 
-    // [KEY] Use NgForm to set values on the form!!!
-    this.signupForm.setValue({
+    // [KEY] Call NgForm.setValue() to set values on the form, but it requires all fields and will overwrite everything.
+    // this.signupForm.setValue({
+    //   userData: {
+    //     userName: suggestedName,
+    //     email: 'test@testmail.com'
+    //   },
+    //   secret: 'teacher',
+    //   questionAnswer: 'Miss Thomas',
+    //   gender: 'female'
+    // });
+
+    // [KEY] Call NgForm.form.patchValue() to only overwrite certain fields
+    this.signupForm.form.patchValue({
       userData: {
-        userName: suggestedName,
-        email: 'test@testmail.com'
-      },
-      secret: 'teacher',
-      questionAnswer: 'Miss Thomas',
-      gender: 'female'
-    });
+        userName: suggestedName
+      }
+    })
   }
 
   onSubmit()
